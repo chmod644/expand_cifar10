@@ -54,6 +54,7 @@ def expand_files(files, in_dir, out_dir):
 
                 # Write image
                 ofpath = os.path.join(image_dir, "{:05}.png".format(cnt))
+                image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
                 cv2.imwrite(ofpath, image)
 
                 # Write label
